@@ -1,0 +1,33 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+}
+
+#titulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#corpo {
+    width: 100%;
+    height: 100%;
+}
+
+#foto {
+    float: left;
+    width: min(30vw, 30vh);
+    height: min(30vw, 30vh);
+    margin: 10px;
+}
