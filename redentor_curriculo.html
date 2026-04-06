@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currículo Oficial™ do Redentor</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f5f0e8;
+    --dark: #1a1a1a;
+    --olive: #4a5c3a;
+    --khaki: #b5a87a;
+    --rust: #8b3a2a;
+    --paper: #ede8dc;
+    --ink: #2c2416;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background-color: #d6cfc0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(0,0,0,0.03) 28px, rgba(0,0,0,0.03) 29px),
+      repeating-linear-gradient(90deg, transparent, transparent 28px, rgba(0,0,0,0.02) 28px, rgba(0,0,0,0.02) 29px);
+    font-family: 'Courier Prime', monospace;
+    color: var(--ink);
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    background: var(--cream);
+    box-shadow: 6px 6px 0 #a09880, 12px 12px 0 #c0b89a;
+    position: relative;
+    overflow: hidden;
+    animation: pageIn 0.8s ease-out both;
+  }
+
+  @keyframes pageIn {
+    from { opacity: 0; transform: translateY(30px) rotate(-0.5deg); }
+    to { opacity: 1; transform: translateY(0) rotate(0deg); }
+  }
+
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 60px;
+    width: 2px;
+    height: 100%;
+    background: rgba(139, 58, 42, 0.3);
+    z-index: 1;
+  }
+
+  /* HEADER */
+  .header {
+    background: var(--olive);
+    padding: 50px 60px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::after {
+    content: '★ CONFIDENCIAL ★';
+    position: absolute;
+    top: 20px; right: -30px;
+    background: var(--rust);
+    color: var(--cream);
+    font-size: 10px;
+    letter-spacing: 3px;
+    padding: 6px 50px;
+    transform: rotate(12deg);
+    font-weight: 700;
+  }
+
+  .stamp {
+    position: absolute;
+    bottom: -10px; right: 60px;
+    width: 110px; height: 110px;
+    border: 4px solid var(--rust);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    color: var(--rust);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transform: rotate(-15deg);
+    opacity: 0.85;
+    padding: 10px;
+    line-height: 1.4;
+    background: transparent;
+  }
+
+  .rank {
+    font-family: 'Courier Prime', monospace;
+    font-size: 10px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--khaki);
+    margin-bottom: 10px;
+  }
+
+  .name {
+    font-family: 'Playfair Display', serif;
+    font-size: 54px;
+    font-weight: 700;
+    color: var(--cream);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--khaki);
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .tagline {
+    font-size: 11px;
+    color: rgba(245,240,232,0.6);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(181,168,122,0.4);
+    padding-top: 14px;
+    margin-top: 14px;
+  }
+
+  /* INFO BAR */
+  .info-bar {
+    background: var(--paper);
+    border-bottom: 2px solid var(--khaki);
+    padding: 16px 60px;
+    display: flex;
+    gap: 30px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    flex-wrap: wrap;
+    color: var(--olive);
+  }
+
+  .info-item strong {
+    color: var(--rust);
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  /* BODY */
+  .body {
+    padding: 50px 60px;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 50px;
+  }
+
+  /* SECTION */
+  .section { margin-bottom: 40px; }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--olive);
+    border-bottom: 2px solid var(--khaki);
+    padding-bottom: 8px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-title span { font-size: 16px; }
+
+  /* ENTRY */
+  .entry { margin-bottom: 26px; position: relative; }
+
+  .entry-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+
+  .entry-meta {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--rust);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .entry-desc {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #3a3228;
+  }
+
+  .entry-desc em {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--olive);
+  }
+
+  /* FOOTNOTE */
+  .footnote {
+    font-size: 10px;
+    color: rgba(58,50,40,0.5);
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  /* SIDEBAR */
+  .sidebar {}
+
+  .sidebar-box {
+    background: var(--paper);
+    border: 1px solid var(--khaki);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-box .section-title { font-size: 10px; }
+
+  .skill-item {
+    margin-bottom: 14px;
+  }
+
+  .skill-name {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .skill-bar {
+    height: 6px;
+    background: rgba(181,168,122,0.3);
+    position: relative;
+  }
+
+  .skill-bar-fill {
+    height: 100%;
+    background: var(--olive);
+    position: relative;
+    animation: fillBar 1.5s ease-out both;
+  }
+
+  @keyframes fillBar {
+    from { width: 0 !important; }
+  }
+
+  .skill-comment {
+    font-size: 9px;
+    color: var(--rust);
+    font-style: italic;
+    margin-top: 3px;
+  }
+
+  /* QUOTE BOX */
+  .quote-box {
+    background: var(--olive);
+    color: var(--cream);
+    padding: 24px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .quote-box::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    color: var(--khaki);
+    opacity: 0.4;
+    position: absolute;
+    top: -10px; left: 14px;
+    line-height: 1;
+  }
+
+  .quote-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-top: 16px;
+  }
+
+  .quote-attr {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--khaki);
+  }
+
+  /* ACHIEVEMENTS */
+  .achievement {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 16px;
+    align-items: flex-start;
+  }
+
+  .achievement-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .achievement-text {
+    font-size: 12px;
+    line-height: 1.6;
+    color: #3a3228;
+  }
+
+  .achievement-text strong {
+    font-size: 13px;
+    display: block;
+    margin-bottom: 2px;
+    color: var(--ink);
+  }
+
+  /* REDLINE */
+  .redline {
+    text-decoration: line-through;
+    color: var(--rust);
+    opacity: 0.6;
+  }
+
+  /* CLASSIFIED */
+  .classified {
+    background: #1a1a1a;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: color 0.3s;
+    user-select: none;
+    border-radius: 2px;
+    padding: 0 4px;
+  }
+  .classified:hover { color: var(--rust); }
+
+  /* FOOTER */
+  .footer {
+    background: var(--ink);
+    color: var(--khaki);
+    padding: 20px 60px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer .warning {
+    font-size: 8px;
+    color: rgba(181,168,122,0.5);
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0;
+    max-width: 300px;
+  }
+
+  /* DIVIDER */
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: var(--khaki);
+    margin: 16px 0;
+  }
+
+  @media (max-width: 700px) {
+    .body { grid-template-columns: 1fr; }
+    .header { padding: 40px 30px 50px; }
+    .name { font-size: 38px; }
+    .body { padding: 30px; }
+    .info-bar { padding: 16px 30px; }
+    .footer { padding: 20px 30px; flex-direction: column; gap: 10px; }
+    .page::before { left: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="rank">Cadete · ITA · Turma da Salvação</div>
+    <div class="name">Redentor</div>
+    <div class="subtitle">O Salvador que Ninguém Pediu</div>
+    <div class="tagline">Disponível para serviço 24/7 · Localização: rancho ou desconhecida · Patrimônio líquido: R$ 0,00 (por escolha própria)</div>
+    <div class="stamp">APROVADO<br>pelo Sargenteante<br>do Rancho<br>★★★</div>
+  </div>
+
+  <!-- INFO BAR -->
+  <div class="info-bar">
+    <div class="info-item">
+      <strong>Disponibilidade</strong>
+      04h30 – 04h31
+    </div>
+    <div class="info-item">
+      <strong>Localização atual</strong>
+      Mocado™ / N/A
+    </div>
+    <div class="info-item">
+      <strong>Última aparição social</strong>
+      Classificada
+    </div>
+    <div class="info-item">
+      <strong>Gasto mensal estimado</strong>
+      R$ 0,00
+    </div>
+    <div class="info-item">
+      <strong>Posto almejado</strong>
+      General do Rancho
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <!-- OBJETIVO -->
+      <div class="section">
+        <div class="section-title"><span>🎯</span> Objetivo Profissional</div>
+        <p style="font-size:14px; line-height:1.8; color:#3a3228;">
+          Busco uma carreira militar onde possa acordar às <strong>4h da manhã</strong> voluntariamente, de segunda a domingo, 
+          sem que ninguém tenha pedido isso. Pretendo acumular patentes e <em>economizar 100% do soldo</em>, 
+          incluindo a parte destinada a água, lazer ou qualquer interação social. 
+          Meu plano de longo prazo envolve ascender ao posto máximo do Exército <em>sem jamais aparecer num rolê sequer.</em>
+        </p>
+      </div>
+
+      <!-- EXPERIENCIA -->
+      <div class="section">
+        <div class="section-title"><span>📋</span> Experiência Profissional</div>
+
+        <div class="entry">
+          <div class="entry-title">Frequentador Profissional de Rancho</div>
+          <div class="entry-meta">ITA · 2023 – presente · Turno: todos. Sem exceção.</div>
+          <div class="entry-desc">
+            Presença registrada em <strong>100% das refeições</strong> desde o ingresso, incluindo dias em que o cardápio era 
+            <em>peixe do rancho</em> — unanimemente considerado o item mais aterrorizante da culinária institucional. 
+            Não apenas compareceu: <strong>repetiu.</strong> Chegou a elogiar. Houve rumores de que tirou foto.
+          </div>
+          <div class="footnote">* Testemunhas afirmam que ele "estava com cara de feliz" ao ver o peixe na sexta.</div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">Especialista em Acordar Cedo Sem Necessidade</div>
+          <div class="entry-meta">Dormitório ITA · Diariamente · 04h30 em ponto</div>
+          <div class="entry-desc">
+            Desenvolveu técnica proprietária de levantar às <strong>04h30</strong> todos os dias, 
+            independentemente do dia da semana, feriado, apagão ou apocalipse zumbi. 
+            Acordar às 06h — horário normal de ser humano — é tratado como <em>"dormir até tarde"</em> 
+            e causa desconforto existencial visível.
+          </div>
+          <div class="footnote">* O alarme é para 04h29. O 04h30 é por garantia.</div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">Gestor de Patrimônio Pessoal (Nível: Scrooge McDuck)</div>
+          <div class="entry-meta">Conta Bancária Própria · Saldo: intocado · Duração: vitalícia</div>
+          <div class="entry-desc">
+            Administra o soldo com rigor cirúrgico. <strong>Nenhum real</strong> é gasto em lazer, comida fora, 
+            saída com amigos ou itens supérfluos como <span class="classified" title="clique para revelar">hidratação</span>. 
+            Já recusou racha de pizza argumentando que "rancho resolve". 
+            Já recusou racha de água argumentando que <em>"tem torneira no banheiro".</em>
+          </div>
+          <div class="footnote">* Especialistas estimam que ele se aposentará milionário por volta de 2089.</div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">Oficial de Operações Clandestinas (Mocagem)</div>
+          <div class="entry-meta">Localização: desconhecida · Status: "tô chegando"</div>
+          <div class="entry-desc">
+            Domina a arte de <strong>desaparecer do mapa</strong> precisamente quando um rolê é organizado. 
+            Responde mensagens com "to chegando" e nunca chega. Foi visto pela última vez numa quinta-feira. 
+            Há quem diga que ele <em>existe apenas durante as refeições</em> e se dissolve no éter nas demais horas.
+          </div>
+          <div class="footnote">* O grupo do WhatsApp ainda exibe "visto por último: nunca".</div>
+        </div>
+
+      </div>
+
+      <!-- FORMACAO -->
+      <div class="section">
+        <div class="section-title"><span>🎓</span> Formação Acadêmica & Vocacional</div>
+
+        <div class="entry">
+          <div class="entry-title">Instituto Tecnológico de Aeronáutica</div>
+          <div class="entry-meta">Engenharia · Cursando · Frequência no Rancho: 100%</div>
+          <div class="entry-desc">
+            Formação técnica de excelência, com currículo paralelo não-oficial em 
+            <em>nutrição aplicada ao peixe grelhado institucional</em> e 
+            <em>estratégias de evasão social em ambiente universitário.</em>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">Escola de Formação de Sonhos Militares</div>
+          <div class="entry-meta">Autodidata · Desde sempre · Concluído na cabeça</div>
+          <div class="entry-desc">
+            Curso contínuo de preparação para a carreira militar, com ênfase em disciplina de horário 
+            (acordar cedo), <span class="redline">vida social</span> e gestão de fardamento.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <!-- QUOTE -->
+      <div class="quote-box">
+        <div class="quote-text">
+          "O peixe do rancho é subestimado. As pessoas não sabem apreciar arte."
+        </div>
+        <div class="quote-attr">— Redentor, 2024</div>
+      </div>
+
+      <!-- HABILIDADES -->
+      <div class="sidebar-box">
+        <div class="section-title"><span>📊</span> Competências</div>
+
+        <div class="skill-item">
+          <div class="skill-name">Acordar Cedo <span>99%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:99%"></div></div>
+          <div class="skill-comment">Anormal. Preocupante.</div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-name">Ir ao Rancho <span>100%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:100%"></div></div>
+          <div class="skill-comment">Sem falha. Nunca. Nem gripe.</div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-name">Comer Peixe <span>97%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:97%"></div></div>
+          <div class="skill-comment">Voluntariamente. Com gosto.</div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-name">Segurar Soldo <span>100%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:100%"></div></div>
+          <div class="skill-comment">Nem água escapa.</div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-name">Aparecer em Rolê <span>2%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:2%; background: var(--rust);"></div></div>
+          <div class="skill-comment">Os 2% foram um engano.</div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-name">Ser Sugão <span>96%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:96%"></div></div>
+          <div class="skill-comment">Disciplina exemplar.</div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-name">Mocagem Avançada <span>98%</span></div>
+          <div class="skill-bar"><div class="skill-bar-fill" style="width:98%"></div></div>
+          <div class="skill-comment">Localização: confidencial.</div>
+        </div>
+      </div>
+
+      <!-- CONQUISTAS -->
+      <div class="sidebar-box">
+        <div class="section-title"><span>🏆</span> Prêmios & Honrarias</div>
+
+        <div class="achievement">
+          <div class="achievement-icon">🐟</div>
+          <div class="achievement-text">
+            <strong>Medalha do Peixe de Ouro</strong>
+            Único cadete a pedir repetição do peixe do rancho de forma voluntária e consciente.
+          </div>
+        </div>
+
+        <div class="achievement">
+          <div class="achievement-icon">🌅</div>
+          <div class="achievement-text">
+            <strong>Troféu Madrugador Perpétuo</strong>
+            420 dias consecutivos acordando antes do galo, do sol e da razão.
+          </div>
+        </div>
+
+        <div class="achievement">
+          <div class="achievement-icon">💰</div>
+          <div class="achievement-text">
+            <strong>Certificado de Pão-Dureza Extrema</strong>
+            Emitido pela Associação Brasileira de Pessoas que Economizam até Respirar.
+          </div>
+        </div>
+
+        <div class="achievement">
+          <div class="achievement-icon">👻</div>
+          <div class="achievement-text">
+            <strong>Fantasma do Semestre</strong>
+            Presença confirmada apenas no rancho. Inexistente em qualquer outro contexto social.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- REFERENCIAS -->
+      <div class="sidebar-box">
+        <div class="section-title"><span>📞</span> Referências</div>
+        <p style="font-size:11px; line-height:1.7; color:#3a3228;">
+          <strong>Cozinheiro-chefe do Rancho</strong><br>
+          <em>"Ele é o único que nunca reclamou do peixe. Nunca."</em><br>
+          <span style="font-size:10px; color:var(--rust);">Disponível 11h–13h e 18h–19h</span>
+        </p>
+        <div class="divider"></div>
+        <p style="font-size:11px; line-height:1.7; color:#3a3228;">
+          <strong>Grupo do WhatsApp da Turma</strong><br>
+          <em>"Ele leu. Nunca respondeu. Nunca foi."</em><br>
+          <span style="font-size:10px; color:var(--rust);">Status: online às 04h31</span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>
+      REDENTOR™ · CURRÍCULO OFICIAL v1.0<br>
+      <span style="font-size:9px; opacity:0.5;">Impresso com soldo alheio</span>
+    </div>
+    <div class="warning">
+      Este documento é uma sátira afetiva produzida por colegas que têm muito carinho pelo Redentor,
+      mas ficam preocupados com o seu bem-estar social e nutricional.
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Reveal classified text on click
+  document.querySelectorAll('.classified').forEach(el => {
+    el.addEventListener('click', () => {
+      el.style.background = 'transparent';
+      el.style.color = 'var(--rust)';
+    });
+  });
+
+  // Animate skill bars on load
+  const bars = document.querySelectorAll('.skill-bar-fill');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.style.animation = 'fillBar 1.5s ease-out both';
+    });
+  });
+  bars.forEach(b => observer.observe(b));
+</script>
+</body>
+</html>
