@@ -11,7 +11,7 @@ Treinamento para os membros de computação da ITA Júnior 2026
 ---
 
 ## Para que esse README serve, em específico? 
-Bom bixaral, eu vou deixar aqui uma sequenciazinha de passos para vocês fazerem uma parte da entrega. VOu deixar aqui como fazer o primeiro commit de vocês
+Bom bixaral, ~~eu vou deixar aqui uma sequenciazinha de passos para vocês fazerem uma parte da entrega. VOu deixar aqui como fazer o primeiro commit de você~~ na real sugou
 
 
 
