@@ -25,9 +25,15 @@ body {
     height: 100%;
 }
 
-#foto {
+#container-foto {
     float: left;
     width: min(30vw, 30vh);
     height: min(30vw, 30vh);
     margin: 10px;
+}
+
+#foto {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
