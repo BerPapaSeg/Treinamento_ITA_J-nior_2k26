@@ -1,0 +1,158 @@
+/*Primário
+#1E3A8A
+Secundário
+#2563EB
+Destaque
+#60A5FA
+Branco
+#FFFFFF
+Fundo
+#F8FAFC
+Divisões
+#E5E7EB
+Texto Principal
+#1F2937
+Texto Secundário
+#6B7280
+*/
+html {
+    background-color:#1E3A8A ;
+    font-family: 'Poppins', sans-serif; 
+    scroll-behavior: smooth
+}
+
+header {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1400px;
+    color:white;
+    border-radius: 10px;
+    background-color: #2563EB ;
+}
+
+header > nav > a {
+  text-decoration: none;
+  color: white;
+  padding-top: 10px;
+ 
+}
+
+header > nav> a:hover {
+  color: #1E3A8A;
+}
+
+nav {
+    display: flex;  
+}
+
+.cabecalho {
+    padding: 10px;
+}
+
+.partes {
+    padding:10px
+}
+
+body > section{
+    background-color: #F8FAFC;
+    margin: auto;
+    max-width: 1400px;
+}
+.aboutme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -7px auto;
+}
+
+.info-pessoal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size:larger;
+}
+.titulo-s1 {
+    color: #1F2937;
+    padding:10px;
+    padding-bottom: 40px;
+}
+
+#foto > img {
+    border-radius: 50%;
+    max-height: 400px;
+    padding:15px;
+    margin-top:-25%;
+}
+
+#autodescricao {
+    margin-top: -100px;
+    max-width: 500px;
+}
+
+.habilidades{
+    background-color:F8FAFC ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.container-habilidades{
+    padding: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0px, 400px));
+    gap: 25px;
+    max-width: 1200px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    margin:auto;
+    width: 90%;
+    height: 80%;
+    border-color: black;
+    border-style: initial;
+    border-radius: 50px;
+    background-color: #60A5FA;
+    text-align: center;
+    
+
+}
+
+.subtitulo {
+    font-weight: 700;
+    font-size:13pt;
+}
+
+.historico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulo-historico {
+    justify-self: center;
+    padding-top: 23px;
+}
+
+ul {
+    align-self: flex-start;
+}
+
+footer {
+    background-color: #2563EB;
+    color: #1F2937;
+    max-width: 1400px;
+    margin:auto;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color:white;
+    font-weight: bold;
+
+}
