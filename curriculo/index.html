@@ -1,96 +1,228 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Currículo do Latrô</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Victor Alysson Rodrigues Santana</title>
     <style>
-        body {
-            background-color: #f0f8ff;
-            font-family: Arial;
-            text-align: center;
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-bg: #f4f7f6;
+            --white: #ffffff;
         }
 
-        h1 {
-            color: darkblue;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            padding: 40px 20px;
         }
 
         .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 20px;
+            justify-content: space-between;
+            align-items: flex-end;
         }
 
-        .box {
-            background-color: white;
-            border: 2px solid blue;
-            border-radius: 10px;
-            padding: 20px;
-            width: 50%;
+        .header-info h1 {
+            font-size: 28pt;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .side {
-            width: 200px;
+        .header-contact {
+            text-align: right;
+            font-size: 10pt;
+            color: var(--secondary-color);
         }
 
-        img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        video {
-            width: 100%;
-            margin-top: 10px;
-            border-radius: 10px;
+        section {
+            margin-bottom: 25px;
         }
 
         h2 {
-            color: #333;
+            font-size: 14pt;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+            margin-bottom: 15px;
         }
+
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .item-sub {
+            font-style: italic;
+            color: var(--secondary-color);
+            font-size: 11pt;
+            margin-bottom: 5px;
+        }
+
+        ul {
+            margin-left: 20px;
+            list-style-type: square;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .skill-category {
+            font-weight: bold;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .badge {
+            background: #ecf0f1;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 9pt;
+            color: var(--secondary-color);
+            border: 1px solid #dcdde1;
+        }
+
+        @media print {
+            body { background: none; padding: 0; }
+            .container { box-shadow: none; max-width: 100%; padding: 0; }
+        }
+
+        #logo{
+            width: 8vw;
+            height: 4vw;
+            background-image: url('#');
+            background-size: cover;
+            display: inline-block;
+
+        }
+
+         #foto_perfil{
+            width: 100%;
+            height: 20vw;
+            background-image: url('#');
+            background-size:contain;
+            display: inline-block;
+            margin-top: 20px;
+
+
+        }
+
+        #texto_perfil h2{
+
+            width: 100%;
+            display: inline;
+            height: 4vw;
+            text-align: center;
+            flex:1;
+            justify-content: center;
+           
+            
+        }
+
+        #foto2 {
+            background-image: url('#');
+            background-size: cover;
+            display:block;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #resumo {
+            align-items: center;
+        }
+
     </style>
-
 </head>
-
 <body>
 
-    <h1>🔥 Currículo Brabo do Latrô 🔥</h1>
-
-    <div class="container">
-
-        <!-- CURRÍCULO -->
-        <div class="box">
-            <p><b>Email:</b> Ball@gmail.com</p>
-            <p><b>Telefone:</b> (11) 4002-8922</p>
-            <p><b>Local:</b> São José dos Campos, SJC</p>
-            
-            <!-- VIDEO -->
-            <video controls width="500" height="500">
-                <source src="video.mp4" type="video/mp4"> 
-                Seu navegador não suporta vídeo.
-            </video>
-
-
-            <h2>Objetivo:</h2>
-            <p>Arrumar um emprego legal (quer muito ser milico)</p>
-
-            <h2>Formação:</h2>
-            <p>Na moleza do 1º fund 😎</p>
-
-            <h2>Time:</h2>
-            <p>São paulino doente (sofre mas não abandona)</p>
-
-            <h2>Habilidades:</h2>
-            <p>- Nadador profissional 🏊 (1km em 10 min)</p>
-            <p>- Mestre do Civilization 🌍</p>
-            <p>- Especialista em BKzin 🍔</p>
+<div class="container">
+    <header>
+        <div class="header-info">
+            <h1 style="display: inline-block;">Mosquitão</h1>
+            <div id="logo"></div>
+            <p>Profissional em matar mosquitos!</p>
         </div>
-
-        <!-- IMAGEM -->
-        <div class="side">
-            <img src="foto.png" alt="Foto do Latrô">
+        <div class="header-contact">
+            <p>Endereço: Campus do CTA - Água parada do pneu do CPOR</p>
+            <p>mosquito.pernilongas_peladus@yahoo.com.br</p>
+            <p><a href="#">www.linkedin.com/mosquitoT30</a></p>
         </div>
+    </header>
 
-    </div>
+    <section id="resumo">
+        <div id="texto_perfil" ><h2>Perfil Profissional</h2>
+            <div id="logo2"></div>
+        <p>Profissional competente, comprometido com o objetico de eliminar todos os mosquitos da face da terra enquanto sente a brisa na terra onde o sol não toca.</p>
+        </div>
+        <div id="foto_perfil"></div>
+    </section>
 
+    <section id="formacao">
+        <h2>Formação Acadêmica</h2>
+        <div class="item">
+            <div class="item-header">
+                <span>Graduação em Ciências Fundamentais Antimosquito.</span>
+                <span>2026 — Presente</span>
+            </div>
+            <div class="item-sub">Instituto Tecnológico de Aeronáutica (ITA)</div>
+        </div>
+        <div class="item">
+            <div class="item-header">
+                <span>Curso de Preparação de Oficiais da Reserva (CPOR)</span>
+                <span>Conclusão Dez/2026</span>
+            </div>
+            <div class="item-sub">Força Aérea Brasileira (FAB)</div>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <h2>Projetos de Destaque</h2>
+        <div class="item">
+            <div class="item-header">
+                <span>Curso Mosquitobas</span>
+                <span>2026</span>
+            </div>
+            <p>Curso direcionado à pessoas que sentem a necessidade de matar mosquitos de maneira performática e artística.</p>
+        </div>
+    </section>
+</div>
 </body>
-</html>
