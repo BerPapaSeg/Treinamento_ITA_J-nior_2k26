@@ -16,6 +16,7 @@ nav {
     padding: 24px 160px;
     background-color: black;
     color: #f0f0f0;
+    text-transform: uppercase;
 
     display: flex;
     flex-direction: row;
@@ -58,4 +59,16 @@ h2 {
     width: 100%;
     filter: grayscale(100%);
     margin-bottom: 30px;
+}
+
+p {
+    font-size: 12px;
+    color: black;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.content{
+    margin-left: 20px;
+    margin-top: 20px;
 }
