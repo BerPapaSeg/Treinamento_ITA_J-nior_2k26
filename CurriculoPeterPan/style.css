@@ -22,9 +22,16 @@ nav {
 }
 
 .container{
-    width: 800px;
-    background-color: darkgray;
+    max-width: 800px;
+    background-color: rgb(218, 216, 216);
     display: flex;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar{
+    width: 35%;
+    background-color: cadetblue;
+    color: white;
+    padding: 40px 20px;
 }
 
